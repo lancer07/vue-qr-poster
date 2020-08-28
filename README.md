@@ -1,5 +1,6 @@
 # create a qr-poster by Vue(二维码海报生成器)
 
+![avatar](https://s1.ax1x.com/2020/08/28/donuin.md.png)
 ## example
 ####  import Poster from 'vue-qr-poster'
 ```

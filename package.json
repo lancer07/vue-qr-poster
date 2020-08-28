@@ -1,7 +1,7 @@
 {
   "name": "vue-qr-poster",
   "description": "create a qr-poster by Vue",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "author": "Qing Lin",
   "main": "dist/vue_poster.common.js",
   "files": [
@@ -11,6 +11,10 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name vue_poster ./src/components/Poster.vue"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:lancer07/vue-qr-poster.git"
   },
   "dependencies": {
     "core-js": "^3.6.5",
