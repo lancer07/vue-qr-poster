@@ -17,7 +17,6 @@
     "url": "git@github.com:lancer07/vue-qr-poster.git"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
     "qrious": "^4.0.2",
     "vue": "^2.6.11"
   },
