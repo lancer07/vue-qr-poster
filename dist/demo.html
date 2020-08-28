@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<title>vue_poster demo</title>
+<script src="https://unpkg.com/vue"></script>
+<script src="./vue_poster.umd.js"></script>
+
+<link rel="stylesheet" href="./vue_poster.css">
+
+
+<div id="app">
+  <demo></demo>
+</div>
+
+<script>
+new Vue({
+  components: {
+    demo: vue_poster
+  }
+}).$mount('#app')
+</script>
