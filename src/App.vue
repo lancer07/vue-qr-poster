@@ -5,7 +5,7 @@
       <img :src="fork" style="width:200px"/>
     </a>
     <poster
-      shareLink="https://github.com/lancer07"
+      :shareLink="shareLink"
       :bgPic="bgPic"
       bgSize="629,695"
       :qrSize="160"
