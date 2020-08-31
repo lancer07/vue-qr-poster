@@ -71,8 +71,10 @@ export default {
   },
   methods: {
     init () {
-      this.qrPic = document.getElementById('qr').toDataURL('image/png')
-      this.draw()
+      setTimeout(() => {
+        this.qrPic = document.getElementById('qr').toDataURL('image/png')
+        this.draw()
+      }, 20)
     },
     draw () {
       var self = this
