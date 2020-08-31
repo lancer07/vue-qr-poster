@@ -1,5 +1,5 @@
 <template>
-  <div id="posterImg">
+  <div>
     <div style="display:none" >
       <qr-code
         id="qr"
@@ -10,6 +10,7 @@
         :background="qrBackground"
       ></qr-code>
     </div>
+    <div id="posterImg"></div>
   </div>
 </template>
 
@@ -63,7 +64,16 @@ export default {
       posterImg: ''
     }
   },
+  watch: {
+    shareLink () {
+      this.init()
+    }
+  },
   methods: {
+    init () {
+      this.qrPic = document.getElementById('qr').toDataURL('image/png')
+      this.draw()
+    },
     draw () {
       var self = this
       var c = document.createElement('canvas')
@@ -93,13 +103,13 @@ export default {
       bgImg.onload = function () {
         cxt.globalCompositeOperation = 'destination-atop'
         cxt.drawImage(bgImg, 0, 0, c.width, c.height, 0, 0, c.width, c.height)
+        document.querySelector('#posterImg').innerHTML = ''
         document.querySelector('#posterImg').appendChild(canvas2image.convertToPNG(c, c.width, c.height))
       }
     }
   },
   mounted () {
-    this.qrPic = document.getElementById('qr').toDataURL('image/png')
-    this.draw()
+    this.init()
   }
 }
 </script>

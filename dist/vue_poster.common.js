@@ -4773,12 +4773,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3b0d5e50-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Poster.vue?vue&type=template&id=c246aa26&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"posterImg"}},[_c('div',{staticStyle:{"display":"none"}},[_c('qr-code',{staticStyle:{"display":"none"},attrs:{"id":"qr","value":_vm.shareLink,"size":_vm.qrSize,"foreground":_vm.qrColor,"background":_vm.qrBackground}})],1)])}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3b0d5e50-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Poster.vue?vue&type=template&id=0b0a3e2e&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticStyle:{"display":"none"}},[_c('qr-code',{staticStyle:{"display":"none"},attrs:{"id":"qr","value":_vm.shareLink,"size":_vm.qrSize,"foreground":_vm.qrColor,"background":_vm.qrBackground}})],1),_c('div',{attrs:{"id":"posterImg"}})])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Poster.vue?vue&type=template&id=c246aa26&
+// CONCATENATED MODULE: ./src/components/Poster.vue?vue&type=template&id=0b0a3e2e&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.number.constructor.js
 var es_number_constructor = __webpack_require__("a9e3");
@@ -5311,6 +5311,7 @@ var convertToImage = function convertToImage(canvas, width, height, type) {
 //
 //
 //
+//
 
 
 /* harmony default export */ var Postervue_type_script_lang_js_ = ({
@@ -5360,7 +5361,16 @@ var convertToImage = function convertToImage(canvas, width, height, type) {
       posterImg: ''
     };
   },
+  watch: {
+    shareLink: function shareLink() {
+      this.init();
+    }
+  },
   methods: {
+    init: function init() {
+      this.qrPic = document.getElementById('qr').toDataURL('image/png');
+      this.draw();
+    },
     draw: function draw() {
       var self = this;
       var c = document.createElement('canvas');
@@ -5382,13 +5392,13 @@ var convertToImage = function convertToImage(canvas, width, height, type) {
       bgImg.onload = function () {
         cxt.globalCompositeOperation = 'destination-atop';
         cxt.drawImage(bgImg, 0, 0, c.width, c.height, 0, 0, c.width, c.height);
+        document.querySelector('#posterImg').innerHTML = '';
         document.querySelector('#posterImg').appendChild(canvas2image.convertToPNG(c, c.width, c.height));
       };
     }
   },
   mounted: function mounted() {
-    this.qrPic = document.getElementById('qr').toDataURL('image/png');
-    this.draw();
+    this.init();
   }
 });
 // CONCATENATED MODULE: ./src/components/Poster.vue?vue&type=script&lang=js&
