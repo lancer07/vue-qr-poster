@@ -10,7 +10,7 @@
         :background="qrBackground"
       ></qr-code>
     </div>
-    <div id="posterImg"></div>
+    <div ref="posterImgWrap"></div>
   </div>
 </template>
 
@@ -105,8 +105,8 @@ export default {
       bgImg.onload = function () {
         cxt.globalCompositeOperation = 'destination-atop'
         cxt.drawImage(bgImg, 0, 0, c.width, c.height, 0, 0, c.width, c.height)
-        document.querySelector('#posterImg').innerHTML = ''
-        document.querySelector('#posterImg').appendChild(canvas2image.convertToPNG(c, c.width, c.height))
+        self.$refs.posterImgWrap.innerHTML = ''
+        self.$refs.posterImgWrap.appendChild(canvas2image.convertToPNG(c, c.width, c.height))
       }
     }
   },

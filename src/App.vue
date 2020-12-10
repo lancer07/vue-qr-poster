@@ -4,7 +4,7 @@
     <a href="https://github.com/lancer07/vue-qr-poster  " style="position:absolute;right:0;top:0">
       <img :src="fork" style="width:200px"/>
     </a>
-    <poster
+    <qr-poster
       :shareLink="shareLink"
       :bgPic="bgPic"
       bgSize="629,695"
@@ -12,16 +12,16 @@
       qrColor="#000"
       qrBackground="#fff"
       qrPosition="242,335"
-    ></poster>
+    ></qr-poster>
   </div>
 </template>
 
 <script>
-import Poster from '@/components/Poster.vue'
+import QrPoster from '@/components/Poster.vue'
 export default {
   name: 'app',
   components:{
-    Poster
+    QrPoster
   },
   data () {
     return {
