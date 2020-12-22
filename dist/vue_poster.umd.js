@@ -4782,12 +4782,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3b0d5e50-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Poster.vue?vue&type=template&id=1743030e&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3b0d5e50-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Poster.vue?vue&type=template&id=78f71fd2&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticStyle:{"display":"none"}},[_c('qr-code',{staticStyle:{"display":"none"},attrs:{"id":"qr","value":_vm.shareLink,"size":_vm.qrSize,"foreground":_vm.qrColor,"background":_vm.qrBackground}})],1),_c('div',{ref:"posterImgWrap"})])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Poster.vue?vue&type=template&id=1743030e&
+// CONCATENATED MODULE: ./src/components/Poster.vue?vue&type=template&id=78f71fd2&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.number.constructor.js
 var es_number_constructor = __webpack_require__("a9e3");
@@ -5407,7 +5407,7 @@ var convertToImage = function convertToImage(canvas, width, height, type) {
         cxt.globalCompositeOperation = 'destination-atop';
         cxt.drawImage(bgImg, 0, 0, c.width, c.height, 0, 0, c.width, c.height);
         self.$refs.posterImgWrap.innerHTML = '';
-        self.$refs.posterImgWrap.appendChild(canvas2image.convertToPNG(c, c.width, c.height));
+        self.$refs.posterImgWrap.appendChild(canvas2image.convertToJPEG(c, c.width, c.height));
       };
     }
   },

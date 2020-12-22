@@ -106,7 +106,7 @@ export default {
         cxt.globalCompositeOperation = 'destination-atop'
         cxt.drawImage(bgImg, 0, 0, c.width, c.height, 0, 0, c.width, c.height)
         self.$refs.posterImgWrap.innerHTML = ''
-        self.$refs.posterImgWrap.appendChild(canvas2image.convertToPNG(c, c.width, c.height))
+        self.$refs.posterImgWrap.appendChild(canvas2image.convertToJPEG(c, c.width, c.height))
       }
     }
   },
