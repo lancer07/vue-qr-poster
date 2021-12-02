@@ -100,8 +100,8 @@ export default {
         )
       }
       var bgImg = new Image()
-      bgImg.src = this.bgPic
       bgImg.setAttribute('crossorigin', 'anonymous')
+      bgImg.src = this.bgPic
       bgImg.onload = function () {
         cxt.globalCompositeOperation = 'destination-atop'
         cxt.drawImage(bgImg, 0, 0, c.width, c.height, 0, 0, c.width, c.height)
